@@ -19,7 +19,7 @@ class Shape {
             document.getElementById('side-length').innerHTML = `Length: ${this.length}`;
         } else { document.getElementById('side-length').innerHTML = "" };
         if (this.width) {
-            document.getElementById('side-width').innerHTML = `Height: ${this.width}`;
+            document.getElementById('side-width').innerHTML = `Diameter: ${this.width}`;
         } else { document.getElementById('side-width').innerHTML = "" };
         if (this.height) {
             document.getElementById('side-height').innerHTML = `Height: ${this.height}`;

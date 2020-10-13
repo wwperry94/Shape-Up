@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shape Up</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Shape Up or Shutup</h1>
+    <div id="btn-container">
+        <form>
+            <input type="button" class="shape-btn" id="rectangle-btn">
+            <label for="rectangle-length-text-field"></label><br>
+            <input type="text" id="rectangle-length-text-field" placeholder="Length">
+            <input type="text" id="rectangle-width-text-field" placeholder="Height">
+            <br></br>
+            <input type="button" class="shape-btn" id="square-btn">
+            <label for="square-length-text-field"></label><br>
+            <input type="text" id="square-length-text-field" placeholder="Side Length">
+            <br></br>
+            <input type="button" class="shape-btn" id="circle-btn">
+            <label for="circle-length-text-field"></label><br>
+            <input type="text" id="circle-radius-text-field" placeholder="Radius">
+            <br></br>
+            <input type="button" class="shape-btn" id="triangle-btn">
+            <label for="triangle-length-text-field"></label><br>
+            <input type="text" id="triangle-height-text-field" placeholder="Height">
+            <br></br>
+            <input type="reset" class="reset-btn" id="reset-btn" onclick="location.reload()">
+        </form>
+    </div>
+
+
+    <div id="display-container">
+        <div id="shape-container"></div>
+    </div>
+    <div id="side-panel" style="background-image: url('background.gif');">
+        <a id="side-name"></a>
+        <a id="side-length"></a>
+        <a id="side-side"></a>
+        <a id="side-width"></a>
+        <a id="side-height"></a>
+        <a id="side-radius"></a>
+        <a id="side-area"></a>
+        <a id="side-perimeter"></a>
+    </div>
+    <script src="script.js">
+    </script>
+</body>
+
+</html>

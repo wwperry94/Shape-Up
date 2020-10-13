@@ -1,6 +1,4 @@
 let shapeContainer = document.getElementById('shape-container');
-let sidePanel = document.getElementById('side-panel');
-// let mydiv = document.getElementById("mydiv");
 
 class Shape {
     constructor(color, name, length, width, height, radius, area, perimeter) {
@@ -54,11 +52,13 @@ class Rectangle extends Shape { // green
         this.area = (length * width);
         this.perimeter = (length * 2 + width * 2);
         this.div.id = 'rectangle';
+        // randomly places the shape within the container when it is created
         this.div.style.position = 'absolute';
         this.div.style.top = `${Math.floor(Math.random() * 550) + 1}px`;
         this.div.style.right = `${Math.floor(Math.random() * 550) + 1}px`;
         this.div.style.width = `${this.length}px`;
         this.div.style.height = `${this.width}px`;
+        // randomly places the shape within the container when it is created
         this.div.addEventListener('click', () => {
             this.describe();
         });
@@ -78,9 +78,11 @@ class Square extends Shape { // red
         this.div.id = 'square';
         this.div.style.height = `${this.side}px`;
         this.div.style.width = `${this.side}px`;
+        // randomly places the shape within the container when it is created
         this.div.style.position = "absolute";
         this.div.style.top = `${Math.floor(Math.random() * 550) + 1}px`;
         this.div.style.right = `${Math.floor(Math.random() * 550) + 1}px`;
+        // randomly places the shape within the container when it is created
         this.div.addEventListener('click', () => {
             this.describe();
         });
@@ -103,9 +105,12 @@ class Circle extends Shape { // purple
         this.div.style.height = `${this.radius}px`;
         this.div.style.width = `${this.radius}px`;
         this.div.style.borderRadius = `${this.radius}px`;
+        // randomly places the shape within the container when it is created
         this.div.style.position = "absolute";
         this.div.style.top = `${Math.floor(Math.random() * 550) + 1}px`;
         this.div.style.right = `${Math.floor(Math.random() * 550) + 1}px`;
+        // calls the description ofa shape once clicked on & removes shape once it is double clicked
+
         this.div.addEventListener('click', () => {
             this.describe();
         });
@@ -125,6 +130,7 @@ class Triangle extends Shape { // yellow
         this.div.id = 'triangle';
         this.color = color;
         this.div.style.position = "absolute";
+        // randomly places the shape within the container when it is created
         this.div.style.top = `${Math.floor(Math.random() * 550) + 1}px`;
         this.div.style.right = `${Math.floor(Math.random() * 550) + 1}px`;
         this.div.style.width = 0;
@@ -134,6 +140,7 @@ class Triangle extends Shape { // yellow
         this.div.style.borderLeft = `${this.height}px solid ${this.color}`;
         this.div.style.backgroundColor = "transparent";
         this.div.style.opacity = ".5";
+        // calls the description ofa shape once clicked on & removes shape once it is double clicked
         this.div.addEventListener('click', () => {
             this.describe();
         });
@@ -144,6 +151,9 @@ class Triangle extends Shape { // yellow
     };
 
 };
+
+// Creates new shape on button click with a radnom generated color
+
 let recBtn = document.getElementById('rectangle-btn');
 recBtn.addEventListener('click', () => {
     let color = getRandomColor();
@@ -169,9 +179,7 @@ triBtn.addEventListener('click', () => {
     let color = getRandomColor();
     let height = `${document.getElementById('triangle-height-text-field').value}`;
     new Triangle(color, "Triangle", height);
-
 });
-
 
 function getRandomColor() {
     var letters = '0123456789ABCDEF';
@@ -181,6 +189,3 @@ function getRandomColor() {
     };
     return color;
 };
-
-
-
